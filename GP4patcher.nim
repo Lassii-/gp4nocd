@@ -1,4 +1,4 @@
-import streams, strutils, std/sha1
+import streams, strutils, std/sha1, system
 
 proc calculateSHA1() : string =
     try:
@@ -6,10 +6,13 @@ proc calculateSHA1() : string =
         return $hash
     except IOError:
         echo "Couldn't open GP4.exe! Make sure it's in the same directory as this tool and that you have rights to that directory!"
+        let quit = readLine(stdin)
+        quit(-1)
         
 
 proc main() =
     echo "This tool will patch the common Grand Prix 4 1.02 cracked exe to remove the requirement for a CD Drive."
+    echo "Created by Lassi Eloranta, see https://github.com/Lassii-/gp4nocd for more information and for the source code (written in Nim)"
     if calculateSHA1() == "592903176A7D52E0AD0DEEF2541A88554ED4181D":
         echo "Proceed? Y/N"
         let proceed = readLine(stdin)
