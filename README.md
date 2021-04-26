@@ -14,6 +14,7 @@ Download the [release](https://github.com/Lassii-/gp4nocd/releases/tag/v1.0) and
 | SHA1  | 592903176a7d52e0ad0deef2541a88554ed4181d  |
 
 ## How to compile
+You don't need this section just to use the tool.
 Compiling has been tested on Windows. The release binary has been compiled as 32bit to increase compatibility with older hardware that you might be using to run this game. It's also been manually compressed using the highest level of UPX to reduce the filesize.
 
 Compile for 32bit:
