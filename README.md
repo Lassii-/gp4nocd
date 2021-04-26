@@ -1,5 +1,5 @@
 # Grand Prix 4 NoCD fix
-![Screenshot](https://raw.githubusercontent.com/Lassii-/gp4nocd/main/screenshot.png)
+![Screenshot](https://raw.githubusercontent.com/Lassii-/gp4nocd/main/screenshot_small.png)
 ## Overview
 The commonly available prepatched version of Grand Prix 4 has an annoying problem of nagging for a CD despite being cracked if you don't have an optical drive in your PC. This tool modifies that version's GP4.exe to remove the said check so the game can be played without using the virtual drive-trick as described by the source where you get the game.
 
