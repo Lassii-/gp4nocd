@@ -5,7 +5,7 @@ proc calculateSHA1() : string =
         let hash = secureHashFile("GP4.exe")
         return $hash
     except IOError:
-        echo "Couldn't open GP4.exe!"
+        echo "Couldn't open GP4.exe! Make sure it's in the same directory as this tool and that you have rights to that directory!"
         
 
 proc main() =
@@ -14,16 +14,19 @@ proc main() =
         echo "Proceed? Y/N"
         let proceed = readLine(stdin)
         if proceed.toLowerAscii == "y":
-            echo "Patching..."
-            let gp4file = newFileStream("GP4.exe", fmReadWriteExisting)
-            defer: gp4file.close
-            gp4file.setPosition(0x0014bc0f)
-            gp4file.write("\x90\x90")
-            gp4file.setPosition(0x0014bc18)
-            gp4file.write("\x90\x90")
-            gp4file.close()
-            echo "Patching complete. Press enter to quit."
-            let quit = readLine(stdin)
+            try:
+                echo "Patching..."
+                let gp4file = newFileStream("GP4.exe", fmReadWriteExisting)
+                defer: gp4file.close
+                gp4file.setPosition(0x0014bc0f)
+                gp4file.write("\x90\x90")
+                gp4file.setPosition(0x0014bc18)
+                gp4file.write("\x90\x90")
+                gp4file.close()
+                echo "Patching complete. Press enter to quit."
+                let quit = readLine(stdin)
+            except IOError:
+                echo "Couldn't open GP4.exe! Make sure it's in the same directory as this tool and that you have rights to that directory!"
         else:
             echo "Bye."
     elif calculateSHA1() == "346E63C4ED47032E496A6AE90E6FF70109FB9529":
