@@ -15,6 +15,9 @@ Hashes of the GP4.exe that works with this tool. The tool also has a built-in ha
 | SHA1  | 592903176a7d52e0ad0deef2541a88554ed4181d  |
 
 ## How to compile
-TODO
+Compiling has been tested on Windows. The release binary has been compiled as 32bit to increase compatibility with older hardware that you might be using to run this game.
 
-Compile with nim c -d:release --opt:size --cpu:i386 -t:-m32 -l:-m32 GP4patcher.nim for 32bit or just nim c -d:release --opt:size GP4patcher.nim for 64bit. The release has been built as 32bit to make it more compatible.
+Compile for 32bit:
+`nim c -d:release --opt:size --cpu:i386 -t:-m32 -l:-m32 GP4patcher.nim`
+or for 64bit
+`nim c -d:release --opt:size GP4patcher.nim`
