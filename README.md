@@ -1,4 +1,5 @@
 # Grand Prix 4 NoCD fix
+
 ## Overview
 The commonly available prepatched version of Grand Prix 4 has an annoying problem of nagging for a CD despite being cracked if you don't have an optical drive in your PC. This tool modifies that version's GP4.exe to remove the said check so the game can be played without using the virtual drive-trick as described by the source where you get the game.
 
@@ -12,3 +13,8 @@ Hashes of the GP4.exe that works with this tool. The tool also has a built-in ha
 | ------------- | ------------- |
 | MD5  | eb6d756ad1a17e8f8b6f77177507b550  |
 | SHA1  | 592903176a7d52e0ad0deef2541a88554ed4181d  |
+
+## How to compile
+TODO
+
+Compile with nim c -d:release --opt:size --cpu:i386 -t:-m32 -l:-m32 GP4patcher.nim for 32bit or just nim c -d:release --opt:size GP4patcher.nim for 64bit. The release has been built as 32bit to make it more compatible.
