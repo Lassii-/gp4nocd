@@ -6,7 +6,7 @@ The commonly available prepatched version of Grand Prix 4 has an annoying proble
 The tool accomplishes this by changing two code jumps to NOPs thus bypassing the check. It's functionality has been tested to the degree that the game launches without the virtual drive trick but no long testing has been done in terms of gameplay.
 
 ## How to use
-Download the [release](https://github.com/Lassii-/gp4nocd/releases/tag/v1.0) and place the file (GP4patcher.exe) in the same folder as your GP4.exe file and follow the instructions after you launch the patcher. You might want to take a copy of your GP4.exe just in case even though this tool has been tested to work properly. The tool will only modify the version of GP4.exe that matches the hashes below. The tool also has a built-in hash check before it does anything so if you don't know to check the hash, you can just try the tool.
+Download the [release](https://github.com/Lassii-/gp4nocd/releases/tag/v1.0) and place the file (GP4patcher.exe) in the same folder as your GP4.exe file and follow the instructions after you launch the patcher. You might want to take a copy of your GP4.exe just in case even though this program has been tested to work properly. The tool will only modify the version of GP4.exe that matches the hashes below. It also has a built-in hash check before it does anything so if you don't know to check the hash, you can just try the patcher.
 
 | Algo  | Hash |
 | ------------- | ------------- |
